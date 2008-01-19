@@ -18,8 +18,8 @@ end
 
 desc "Copy trunk to stable tag in SVN to make things easy for Rails plugin installation."
 task :copy_stable do
-  trunk_dir  = "~/src/opensource/robsanheim/multi_rails/trunk"
-  stable_dir = "~/src/opensource/robsanheim/multi_rails/tags/stable/multi_rails/"
+  trunk_dir  = "~/work/relevance/opensource/multi_rails/trunk/"
+  stable_dir = "~/work/relevance/opensource/multi_rails/tags/stable/multi_rails/"
   puts %x[rsync --exclude='.svn' -r #{trunk_dir} #{stable_dir}]
   puts %x[svn ci #{stable_dir} -m 'Release to stable from trunk.']
 end
