@@ -9,6 +9,7 @@ describe "Rubygem test helper init" do
   end
   
   it "should actually do the gem and require" do
+    MultiRails::Loader.stubs(:verify_rails_installed).returns(nil)
     MultiRails::Loader.any_instance.expects(:require).never
     MultiRails::Loader.any_instance.expects(:gem_rails)
     MultiRails::Loader.any_instance.expects(:require_rails)
