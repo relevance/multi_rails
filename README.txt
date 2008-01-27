@@ -85,8 +85,8 @@ MultiRails was initially developed by members of Relevance while developing Stre
 * rdocs             http://multi-rails.rubyforge.org/
 * mailing list      http://groups.google.com/group/multi_rails
 
-* svn stable        http://opensource.thinkrelevance.com/svn/multi_rails/tags/stable/multi_rails (gem is released from here)
-* svn trunk         http://opensource.thinkrelevance.com/svn/multi_rails/trunk
+* svn stable        https://opensource.thinkrelevance.com/svn/multi_rails/tags/stable/multi_rails (gem is released from here)
+* svn trunk         https://opensource.thinkrelevance.com/svn/multi_rails/trunk
 
 #### LICENSE:
 
