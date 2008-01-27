@@ -1,6 +1,23 @@
 require 'autotest'
 $LOAD_PATH.unshift "test", "test/autotest"
 # Make sure autotest groks our directory structure to map tests to files
-Autotest.add_discovery do
- ["railsplugin"]
+p 'here!'
+
+Autotest.add_hook :initialize do |at|
+  at.add_mapping(/^lib\/(.*)\.rb$/) { |filename, m|
+    file = File.basename(filename).gsub("_", "_?").gsub(".rb", "")
+    foo = at.files_matching %r%^test/.*#{file}_test.rb$%
+    foo
+  }
+  
+  at.add_mapping(/^test\/.*_test\.rb$/) { |filename, _|
+    filename
+  }
+  
+  # 
+  # 
+  # at.add_mapping(%r%^plugins/acts_as_currency/lib/.*\.rb$%) {
+  #   at.files_matching %r%^spec/models/product_spec\.rb$% +
+  #   at.files_matching %r%^plugins/acts_as_currency/spec/.*_spec\.rb$%
+  # }
 end

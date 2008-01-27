@@ -1,10 +1,19 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "multi_rails_test_helper"))
 
-describe "loader" do
+describe "Loader with no Rails gem installed" do
+
+  it "should fail fast if we don't have any rails gems installed" do
+    Gem::cache.expects(:find_name).with("rails").returns([])
+    lambda { MultiRails::Loader.gem_and_require_rails }.should.raise(MultiRailsError).message.should == "No Rails gems installed!"
+  end
+  
+end
+describe "Loader with at least one Rails gem installed" do
   
   setup do
     never_really_require_rails
     never_puts
+    MultiRails::Loader.stubs(:verify_rails_installed).returns(nil)
   end
   
   it "should fall back to a default version to try" do
@@ -20,6 +29,7 @@ describe "loader" do
   
   it "should gem the specified version" do
     MultiRails::Loader.any_instance.stubs(:display_rails_gem_used)
+    MultiRails::Config.stubs(:named_version_lookup).with("1.2.5").returns("1.2.5")
     stub_rails_requires
     MultiRails::Loader.any_instance.expects(:gem).with("rails", "1.2.5").returns(true)
     MultiRails::Loader.gem_and_require_rails("1.2.5")

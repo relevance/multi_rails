@@ -10,6 +10,7 @@ module MultiRails
     # Require and gem rails
     # Will use a default version if none is supplied
     def self.gem_and_require_rails(rails_version = nil)
+      verify_rails_installed
       rails_version = MultiRails::Config.version_lookup(rails_version)
       Loader.new(rails_version).gem_and_require_rails
     end
@@ -29,6 +30,11 @@ module MultiRails
     # Find the most recent version
     def self.latest_version
       all_rails_versions.sort.last
+    end
+    
+    # Verify we have at least one Rails gem installed, otherwise fail early
+    def self.verify_rails_installed
+      raise MultiRailsError, "No Rails gems installed!" if Gem::cache.find_name("rails").empty? 
     end
     
     # A version of the loader is created to gem and require one version of Rails

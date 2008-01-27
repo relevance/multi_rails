@@ -1,3 +1,7 @@
+== 0.0.5
+
+* Handle the case where we don't have any Rails gems installed at all by raising early to prevent weirdness later on (Evan Weaver)
+
 == 0.0.4
 
 * Change the all task so that the build will run through all rails versions, even if one of them fails, but at the end

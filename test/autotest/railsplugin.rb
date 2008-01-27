@@ -5,12 +5,8 @@ class Autotest::Railsplugin < Autotest
     @exceptions = /\/\./
     @test_mappings = {
       /^lib\/(.*)\.rb$/ => proc { |filename, m|
-        # p "match #{m[1]}"
         file = File.basename(filename).gsub("_", "_?").gsub(".rb", "")
         foo = files_matching %r%^test/.*#{file}_test.rb$%
-        # p "the file: #{file}"
-        # p "the regex: #{files_matching %r%^test/.*#{file}_test.rb$%}"
-        # p "files_matching: #{foo}"
         foo
       },
       /^test\/.*_test\.rb$/ => proc { |filename, _|
