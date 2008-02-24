@@ -39,7 +39,7 @@ MultiRails was initially developed by members of Relevance while developing Stre
 #### INSTALLING FOR RAILS APPS
 
 * install the plugin, which will copy the multi_rails_runner into your script folder on install.
-    script/plugin install https://opensource.thinkrelevance.com/svn/multi_rails/tags/stable/multi_rails
+    script/plugin install https://opensource.thinkrelevance.com/svn/rubygems/multi_rails/tags/stable/multi_rails
 
 * Run the multi_rails bootstrap command to get your Rails app ready to go with multi_rails - this will add a require line to the top of your environment.rb needed for multi_rails to work right.
     script/multi_rails_runner bootstrap
@@ -85,8 +85,8 @@ MultiRails was initially developed by members of Relevance while developing Stre
 * rdocs             http://multi-rails.rubyforge.org/
 * mailing list      http://groups.google.com/group/multi_rails
 
-* svn stable        https://opensource.thinkrelevance.com/svn/multi_rails/tags/stable/multi_rails (gem is released from here)
-* svn trunk         https://opensource.thinkrelevance.com/svn/multi_rails/trunk
+* svn stable        https://opensource.thinkrelevance.com/svn/rubygems/multi_rails/tags/stable/multi_rails (gem is released from here)
+* svn trunk         https://opensource.thinkrelevance.com/svn/rubygems/multi_rails/trunk
 
 #### LICENSE:
 
