@@ -1,8 +1,9 @@
-== 0.0.5
+v0.0.5 (HEAD)
 
 * Handle the case where we don't have any Rails gems installed at all by raising early to prevent weirdness later on (Evan Weaver)
+* Update to follow Relevance OSS standards
 
-== 0.0.4
+v0.0.4
 
 * Change the all task so that the build will run through all rails versions, even if one of them fails, but at the end
   the failing versions are printed and we abort.  Thanks to Evan Weaver for initial patch and idea.
@@ -10,7 +11,7 @@
 * add autotest railsplugin discovery, so I can use autotest to test multi_rails
 * various rake tweaks to make release easier and more automated
 
-== 0.0.3 
+v0.0.3 
 
 * add support for using multi_rails with regular Rails apps, which was way more work then it should have been.
 * add the bootstrap task to add our multi_rails require line at the top of environment.rb in a rails app
@@ -19,7 +20,7 @@
 * improve rdoc
 * move svn hosting to google code, to make it publicly accessible
 
-== 0.0.2 / Tuesday; October 23, 2007
+v0.0.2 / Tuesday; October 23, 2007
 
 * first public release!
 * add link to email group
@@ -27,6 +28,6 @@
 * add hook file to load rake tasks when used as a gem
 * change the env var for specifying the rails version under test to avoid name conflicts
 
-== 0.0.1 / Sunday; October 21, 2007
+v0.0.1 / Sunday; October 21, 2007
 
 * initial release, no public announcement
