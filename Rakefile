@@ -1,27 +1,21 @@
 require 'rubygems'
-require 'hoe'
+require 'echoe'
 require File.expand_path(File.join(File.dirname(__FILE__), "/lib/multi_rails"))
 load File.expand_path(File.join(File.dirname(__FILE__), "/tasks/multi_rails.rake"))
 
-Hoe.new('multi_rails', MultiRails::VERSION) do |p|
-  p.rubyforge_name = 'multi-rails'
-  p.author = 'Relevance'
+Echoe.new('multi_rails') do |p|
+  p.version = MultiRails::VERSION
+  p.rubyforge_name = 'thinkrelevance'
+  p.author = ['Rob Sanheim', 'Relevance']
   p.email = 'multi_rails@googlegroups.com'
   p.summary = 'Testing tool to easily test agaist multiple versions of Rails.'
-  p.description = p.paragraphs_of('README.txt', 0..10).join("\n\n")
+  p.description = "MultiRails allows easy testing against multiple versions of Rails for your Rails specific gem or plugin.  It also has tentative support testing Rails applications against multiple versions of Rails."
   p.url = 'http://multi-rails.rubyforge.org/'
-  p.changes = p.paragraphs_of('History.txt', 0..1).join("\n\n")
-  p.remote_rdoc_dir = '' # Release to root
-  p.test_globs = 'test/**/*_test.rb' # we use the foo_test convention
-  p.spec_extras[:require_paths] = ['lib', 'tasks']
-end
-
-desc "Copy trunk to stable tag in SVN to make things easy for Rails plugin installation."
-task :copy_stable do
-  trunk_dir  = "~/src/relevance/opensource/multi_rails/trunk/"
-  stable_dir = "~/src/relevance/opensource/multi_rails/tags/stable/multi_rails/"
-  puts %x[rsync --exclude='.svn' -r #{trunk_dir} #{stable_dir}]
-  puts %x[svn ci #{stable_dir} -m 'Release to stable from trunk.']
+  p.rdoc_pattern = /^(lib|bin|ext)|txt|rdoc|CHANGELOG|MIT-LICENSE$/
+  rdoc_template = `allison --path`.strip << ".rb"
+  p.test_pattern = 'test/**/*_test.rb'
+  p.eval = lambda { self.require_paths = ['lib', 'tasks'] }
+  p.manifest_name = 'manifest.txt'
 end
 
 desc "Convert the readme from markdown to html to prep for posting on blog/email/whatever."
