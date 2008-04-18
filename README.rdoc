@@ -81,8 +81,7 @@ MultiRails was initially developed by members of Relevance while developing Stre
 
 == URLs
 
-* rubyforge home    http://rubyforge.org/projects/multi-rails/
-* rdocs             http://multi-rails.rubyforge.org/
+* rdocs             http://thinkrelevance.rubyforge.org/multi_rails/
 * mailing list      http://groups.google.com/group/multi_rails
 
 * view source       http://github.com/relevance/multi_rails/tree/master

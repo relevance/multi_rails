@@ -33,7 +33,7 @@ task :email_to_html => :email do
 end
 
 desc "Do a full release of the multi_rails, including copying to stable tag, pushing docs and prepping for blog/annoucement."
-task :full_release => [:require_version, :copy_stable, :publish_docs, :email_to_html, :release]
+task :full_release => [:require_version, :publish_docs, :email_to_html, :release]
 
 desc "Must supply the VERSION env var"
 task :require_version do
