@@ -1,7 +1,4 @@
-v0.0.5 (HEAD)
-
-* Handle the case where we don't have any Rails gems installed at all by raising early to prevent weirdness later on (Evan Weaver)
-* Update to follow Relevance OSS standards
+v0.0.5. (HEAD) Handle the case where we don't have any Rails gems installed at all by raising early to prevent weirdness later on (Evan Weaver); Update to follow Relevance OSS standards
 
 v0.0.4
 

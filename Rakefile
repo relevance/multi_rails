@@ -12,10 +12,11 @@ Echoe.new('multi_rails') do |p|
   p.description = "MultiRails allows easy testing against multiple versions of Rails for your Rails specific gem or plugin.  It also has tentative support testing Rails applications against multiple versions of Rails."
   p.url = 'http://multi-rails.rubyforge.org/'
   p.rdoc_pattern = /^(lib|bin|ext)|txt|rdoc|CHANGELOG|MIT-LICENSE$/
-  rdoc_template = `allison --path`.strip << ".rb"
   p.test_pattern = 'test/**/*_test.rb'
   p.eval = lambda { self.require_paths = ['lib', 'tasks'] }
   p.manifest_name = 'manifest.txt'
+  rdoc_template = `allison --path`.strip << ".rb"
+  p.rdoc_template = rdoc_template
 end
 
 desc "Convert the readme from markdown to html to prep for posting on blog/email/whatever."
