@@ -6,7 +6,7 @@ files.each do |file|
 end
 
 module MultiRails
-  VERSION = '0.0.5'
+  VERSION = '0.0.6'
   BAR = "=" * 80 # BEST CONSTANT EVAH
   
   def self.gem_and_require_rails
