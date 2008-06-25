@@ -33,6 +33,7 @@ MultiRails was initially developed by members of Relevance while developing Stre
 * Ruby 1.8.5 or higher
 * Rubygems
 * Rails 1.2.1 or higher
+* Rails 2.1 is not yet supported
 * at least one copy of Rails installed via rubygems.
 
 == INSTALLING FOR RAILS APPS
