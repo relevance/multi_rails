@@ -101,8 +101,4 @@ describe "finding latest version" do
     MultiRails::Loader.latest_version.should == "1.2.3"
   end
   
-  it "flunks" do
-    flunk
-  end
-  
 end
