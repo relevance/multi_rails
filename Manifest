@@ -1,3 +1,4 @@
+Rakefile
 autotest.rb
 bin/multi_rails_runner.rb
 CHANGELOG

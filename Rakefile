@@ -14,7 +14,7 @@ Echoe.new('multi_rails') do |p|
   p.rdoc_pattern = /^(lib|bin|ext)|txt|rdoc|CHANGELOG|MIT-LICENSE$/
   p.test_pattern = 'test/**/*_test.rb'
   p.eval = lambda { self.require_paths = ['lib', 'tasks'] }
-  p.manifest_name = 'manifest.txt'
+  # p.manifest_name = 'manifest.txt'
   rdoc_template = `allison --path`.strip << ".rb"
   p.rdoc_template = rdoc_template
 end
