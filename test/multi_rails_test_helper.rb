@@ -1,4 +1,6 @@
+require 'rubygems'
 require 'test/unit'
+gem 'test-spec'
 require 'test/spec'
 require 'mocha'
 require 'redgreen' unless Object.const_defined?("TextMate")
