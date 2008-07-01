@@ -1,4 +1,3 @@
-Rakefile
 autotest.rb
 bin/multi_rails_runner.rb
 CHANGELOG
@@ -11,8 +10,9 @@ lib/multi_rails/multi_rails_error.rb
 lib/multi_rails/rails_app_helper.rb
 lib/multi_rails.rb
 lib/multi_rails_init.rb
-Manifest.txt
+Manifest
 MIT-LICENSE
+Rakefile
 README.rdoc
 tasks/load_multi_rails_rake_tasks.rb
 tasks/multi_rails.rake
@@ -24,4 +24,3 @@ test/loader_test.rb
 test/multi_rails_init_test.rb
 test/multi_rails_test_helper.rb
 test/rails_app_helper_test.rb
-manifest.txt
