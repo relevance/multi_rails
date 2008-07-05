@@ -12,6 +12,7 @@ lib/multi_rails.rb
 lib/multi_rails_init.rb
 Manifest
 MIT-LICENSE
+multi_rails.gemspec
 Rakefile
 README.rdoc
 tasks/load_multi_rails_rake_tasks.rb
