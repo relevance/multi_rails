@@ -16,10 +16,6 @@ describe "Loader with at least one Rails gem installed" do
     MultiRails::Loader.stubs(:verify_rails_installed).returns(nil)
   end
   
-  it 'fails' do
-    flunk
-  end
-  
   it "should fall back to a default version to try" do
     MultiRails::Loader.any_instance.stubs(:display_rails_gem_used)
     stub_rails_requires
