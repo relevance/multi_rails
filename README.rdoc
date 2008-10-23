@@ -82,7 +82,7 @@ MultiRails was initially developed by members of Relevance while developing Stre
 
 == URLs
 
-* Log bugs, issues, and suggestions on Trac: http://opensource.thinkrelevance.com/wiki/cap_gun
+* Log bugs, issues, and suggestions on Lighthouse: http://relevance.lighthouseapp.com/projects/18695-multirails/
 
 * rdocs             http://thinkrelevance.rubyforge.org/multi_rails/
 * mailing list      http://groups.google.com/group/multi_rails
