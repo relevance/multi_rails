@@ -18,7 +18,7 @@ Echoe.new('multi_rails') do |p|
   p.email = 'multi_rails@googlegroups.com'
   p.summary = 'Testing tool to easily test agaist multiple versions of Rails.'
   p.description = "MultiRails allows easy testing against multiple versions of Rails for your Rails specific gem or plugin.  It also has tentative support testing Rails applications against multiple versions of Rails."
-  p.url = 'http://multi-rails.rubyforge.org/'
+  p.url = "http://github.com/relevance/multi_rails/"
   p.rdoc_pattern = /^(lib|bin|ext)|txt|rdoc|CHANGELOG|MIT-LICENSE$/
   p.test_pattern = 'test/**/*_test.rb'
   p.eval = lambda { self.require_paths = ['lib', 'tasks'] }
